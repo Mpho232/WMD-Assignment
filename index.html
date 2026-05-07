@@ -2,136 +2,436 @@
 <html lang="en">
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Menu | M.R Foods</title>
+<title>MR Foods</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial;
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#e5e5e5;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    width:90%;
+    margin:20px auto;
+    background:white;
+    border:4px solid #ff7b00;
+}
+
+/* HEADER */
+
+.header{
+    width:100%;
+    height:180px;
+    background:#bfefff;
+
+    display:flex;
+    align-items:center;
+}
+
+.logo-box{
+    width:220px;
+    height:100%;
+    border-right:3px solid #999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo-box img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.company-name{
+    padding-left:30px;
+}
+
+.company-name h1{
+    font-size:55px;
+    color:#111;
+}
+
+/* NAVIGATION */
+
+.navbar{
+    width:100%;
+    background:#9baec0;
+
+    padding:25px;
+
+    display:flex;
+    gap:30px;
+}
+
+.navbar a{
+    text-decoration:none;
+    background:#c8f5ff;
+    color:#333;
+
+    padding:12px 25px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    background:#ff7b00;
+    color:white;
+}
+
+/* MAIN CONTENT */
+
+.main-content{
+    width:100%;
+    display:flex;
+
+    padding:20px;
+    gap:20px;
+}
+
+/* SIDE PANEL */
+
+.side-panel{
+    width:28%;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+/* SIDE BOX */
+
+.side-box{
+    background:#f2f2f2;
+
+    border:5px solid #8b4b28;
+
+    padding:10px;
+
+    display:flex;
+    gap:10px;
+}
+
+.side-box img{
+    width:90px;
+    height:90px;
+
+    object-fit:cover;
+
+    border:2px solid #777;
+}
+
+.side-box p{
+    font-size:18px;
+    line-height:1.3;
+}
+
+.side-box a{
+    color:purple;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* SPECIALS SECTION */
+
+.specials{
+    width:72%;
+
+    background:#bfefff;
+
+    border:4px solid #8b4b28;
+
+    padding:20px;
+}
+
+/* TOP SPECIAL */
+
+.special-top{
+    display:flex;
+    gap:20px;
+}
+
+.special-top img{
+    width:280px;
+    height:220px;
+
+    object-fit:cover;
+
+    border:3px solid #888;
+}
+
+.special-text h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.special-text p{
+    font-size:22px;
+    line-height:1.5;
+}
+
+/* BOTTOM SPECIALS */
+
+.bottom-specials{
+    margin-top:40px;
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.small-box{
+    flex:1;
+    min-width:250px;
+
+    background:#f2f2f2;
+
+    padding:20px;
+
+    border:5px solid #8b4b28;
+
+    text-align:center;
+}
+
+.small-box img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+
+    padding:30px;
+
+    border-top:2px solid #999;
+
+    margin-top:20px;
+
+    font-size:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .main-content{
+        flex-direction:column;
     }
 
-    body{
-      background:#f5f5f5;
+    .side-panel,
+    .specials{
+        width:100%;
     }
 
-    /* NAVBAR */
-
-    .navbar{
-      width:100%;
-      height:80px;
-      background:#111;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:0 8%;
+    .special-top{
+        flex-direction:column;
     }
 
-    .navbar h1{
-      color:#ff7b00;
+    .special-top img{
+        width:100%;
     }
 
-    .navbar nav a{
-      color:white;
-      text-decoration:none;
-      margin-left:20px;
+    .company-name h1{
+        font-size:35px;
     }
+}
 
-    /* MENU PAGE */
-
-    .menu-page{
-      width:100%;
-      padding:50px;
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-      gap:30px;
-    }
-
-    /* MENU BOXES */
-
-    .menu-box{
-      background:white;
-      border:3px solid #ff7b00;
-      border-radius:15px;
-      overflow:hidden;
-      text-align:center;
-      padding-bottom:20px;
-      transition:0.3s;
-    }
-
-    .menu-box:hover{
-      transform:translateY(-10px);
-    }
-
-    .menu-box img{
-      width:100%;
-      height:250px;
-      object-fit:cover;
-    }
-
-    .menu-box h2{
-      margin:20px 0;
-    }
-
-    .menu-box a{
-      text-decoration:none;
-      background:#ff7b00;
-      color:white;
-      padding:10px 20px;
-      border-radius:30px;
-    }
-
-  </style>
+</style>
 
 </head>
 
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
+<div class="container">
 
-    <h1>M.R Foods</h1>
+    <!-- HEADER -->
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="cart.html">Cart</a>
-    </nav>
+    <div class="header">
 
-  </header>
+        <div class="logo-box">
+            <img src="images/logo.png" alt="logo">
+        </div>
 
-  <!-- MENU CONTAINER -->
-  <section class="menu-page">
+        <div class="company-name">
+            <h1>M.R Foods</h1>
+        </div>
 
-    <div class="menu-box">
-      <img src="images/burger.jpg" alt="Burger">
-      <h2>Burgers</h2>
-      <a href="burgers.html">View More</a>
     </div>
 
-    <div class="menu-box">
-      <img src="images/fries.jpg" alt="Fries">
-      <h2>French Fries</h2>
-      <a href="fries.html">View More</a>
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="cart.html">Cart</a>
+
     </div>
 
-    <div class="menu-box">
-      <img src="images/quesadilla.jpg" alt="Quesadilla">
-      <h2>Quesadillas</h2>
-      <a href="quesadillas.html">View More</a>
+    <!-- MAIN CONTENT -->
+
+    <div class="main-content">
+
+        <!-- SIDE PANEL -->
+
+        <div class="side-panel">
+
+            <div class="side-box">
+
+                <img src="images/burger.jpg" alt="Burger">
+
+                <div>
+                    <p>
+                        Double Cheese Burger Special
+                    </p>
+
+                    <br>
+
+                    <a href="#">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="side-box">
+
+                <img src="images/fries.jpg" alt="Fries">
+
+                <div>
+                    <p>
+                        Crispy French Fries Combo
+                    </p>
+
+                    <br>
+
+                    <a href="#">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="side-box">
+
+                <img src="images/quesadilla.jpg" alt="Quesadilla">
+
+                <div>
+                    <p>
+                        Chicken Quesadilla Deal
+                    </p>
+
+                    <br>
+
+                    <a href="#">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="side-box">
+
+                <img src="images/russian.jpg" alt="Hotdog">
+
+                <div>
+                    <p>
+                        Russian Hotdog Combo
+                    </p>
+
+                    <br>
+
+                    <a href="#">
+                        Read More
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SPECIALS SECTION -->
+
+        <div class="specials">
+
+            <div class="special-top">
+
+                <img src="images/special.jpg" alt="Today's Special">
+
+                <div class="special-text">
+
+                    <h2>Specials For Today</h2>
+
+                    <p>
+                        Enjoy our delicious burgers,
+                        loaded fries, cheesy quesadillas
+                        and juicy hotdogs made fresh
+                        every single day at M.R Foods.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- BOTTOM BOXES -->
+
+            <div class="bottom-specials">
+
+                <div class="small-box">
+
+                    <img src="images/burger2.jpg" alt="Burger">
+
+                    <h3>Burger Combo</h3>
+
+                </div>
+
+                <div class="small-box">
+
+                    <img src="images/fries2.jpg" alt="Fries">
+
+                    <h3>Loaded Fries</h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="menu-box">
-      <img src="images/russian.jpg" alt="Hotdogs">
-      <h2>Hotdogs</h2>
-      <a href="hotdogs.html">View More</a>
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        Copyright © 2026.
+        All rights reserved.
+
     </div>
 
-  </section>
+</div>
 
 </body>
 </html>
