@@ -1,156 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>M.R Foods</title>
+  <title>Menu | M.R Foods</title>
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial;
+    }
 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  >
+    body{
+      background:#f5f5f5;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      width:100%;
+      height:80px;
+      background:#111;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:0 8%;
+    }
+
+    .navbar h1{
+      color:#ff7b00;
+    }
+
+    .navbar nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+    }
+
+    /* MENU PAGE */
+
+    .menu-page{
+      width:100%;
+      padding:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:30px;
+    }
+
+    /* MENU BOXES */
+
+    .menu-box{
+      background:white;
+      border:3px solid #ff7b00;
+      border-radius:15px;
+      overflow:hidden;
+      text-align:center;
+      padding-bottom:20px;
+      transition:0.3s;
+    }
+
+    .menu-box:hover{
+      transform:translateY(-10px);
+    }
+
+    .menu-box img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .menu-box h2{
+      margin:20px 0;
+    }
+
+    .menu-box a{
+      text-decoration:none;
+      background:#ff7b00;
+      color:white;
+      padding:10px 20px;
+      border-radius:30px;
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <!-- TOP NAVBAR -->
-
+  <!-- NAVBAR -->
   <header class="navbar">
 
-    <div class="logo">
-      M.R Foods
-    </div>
+    <h1>M.R Foods</h1>
 
-    <div class="menu-btn" id="menu-btn">
-      <i class="fa-solid fa-bars"></i>
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="cart.html">Cart</a>
+    </nav>
 
   </header>
 
-  <!-- SIDEBAR -->
+  <!-- MENU CONTAINER -->
+  <section class="menu-page">
 
-  <aside class="sidebar" id="sidebar">
-
-    <div class="sidebar-header">
-
-      <h2>M.R Foods</h2>
-
-      <i class="fa-solid fa-xmark" id="close-btn"></i>
-
+    <div class="menu-box">
+      <img src="images/burger.jpg" alt="Burger">
+      <h2>Burgers</h2>
+      <a href="burgers.html">View More</a>
     </div>
 
-    <ul class="sidebar-links">
-
-      <!-- MENU -->
-
-      <li>
-
-        <button class="dropdown-btn">
-          Menu
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <ul class="dropdown">
-
-          <li><a href="#">Burgers</a></li>
-
-          <li><a href="#">Fries</a></li>
-
-          <li><a href="#">Quesadillas</a></li>
-
-          <!-- HOTDOGS DROPDOWN -->
-
-          <li>
-
-            <button class="dropdown-btn inner-btn">
-              Hotdogs
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-
-            <ul class="dropdown inner-dropdown">
-
-              <li><a href="#">Russian Hotdog</a></li>
-
-              <li><a href="#">Boerwors Hotdog</a></li>
-
-            </ul>
-
-          </li>
-
-          <li><a href="#">Drinks</a></li>
-
-        </ul>
-
-      </li>
-
-      <!-- CART -->
-
-      <li>
-
-        <button class="dropdown-btn">
-          Cart
-          <i class="fa-solid fa-chevron-down"></i>
-        </button>
-
-        <ul class="dropdown">
-
-          <li><a href="#">Checkout</a></li>
-
-          <!-- PAYMENT OPTIONS -->
-
-          <li>
-
-            <button class="dropdown-btn inner-btn">
-              Payment Options
-              <i class="fa-solid fa-chevron-down"></i>
-            </button>
-
-            <ul class="dropdown inner-dropdown">
-
-              <li><a href="#">FNB Pay2Cell</a></li>
-
-              <li><a href="#">Orange Money</a></li>
-
-              <li><a href="#">MyZaka</a></li>
-
-              <li><a href="#">Smega</a></li>
-
-            </ul>
-
-          </li>
-
-        </ul>
-
-      </li>
-
-    </ul>
-
-  </aside>
-
-  <!-- MAIN CONTENT -->
-
-  <main class="hero">
-
-    <div class="hero-content">
-
-      <h1>Fresh. Fast. Flavorful.</h1>
-
-      <p>
-        Pickup meals made for BAC students.
-      </p>
-
-      <button class="hero-btn">
-        Order Now
-      </button>
-
+    <div class="menu-box">
+      <img src="images/fries.jpg" alt="Fries">
+      <h2>French Fries</h2>
+      <a href="fries.html">View More</a>
     </div>
 
-  </main>
+    <div class="menu-box">
+      <img src="images/quesadilla.jpg" alt="Quesadilla">
+      <h2>Quesadillas</h2>
+      <a href="quesadillas.html">View More</a>
+    </div>
 
-  <script src="script.js"></script>
+    <div class="menu-box">
+      <img src="images/russian.jpg" alt="Hotdogs">
+      <h2>Hotdogs</h2>
+      <a href="hotdogs.html">View More</a>
+    </div>
+
+  </section>
 
 </body>
 </html>
