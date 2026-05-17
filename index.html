@@ -9,6 +9,10 @@
 
 <style>
 
+/* =========================
+   GLOBAL SETTINGS
+========================= */
+
 *{
     margin:0;
     padding:0;
@@ -18,8 +22,6 @@
 
 body{
 
-    /* BACKGROUND IMAGE */
-
     background-image:url("images/background.jpg");
 
     background-size:cover;
@@ -27,31 +29,25 @@ body{
     background-attachment:fixed;
 
     min-height:100vh;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    padding:40px;
 }
 
-/* MAIN CONTAINER */
+/* =========================
+   MAIN CONTAINER
+========================= */
 
 .container{
 
-    width:95%;
-    max-width:1200px;
+    width:100%;
+    min-height:100vh;
 
     background:rgba(92, 51, 23, 0.95);
 
-    border-radius:20px;
-
     overflow:hidden;
-
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 .header{
 
@@ -59,7 +55,7 @@ body{
 
     background:#3e2413;
 
-    padding:20px 40px;
+    padding:20px 50px;
 
     display:flex;
     justify-content:space-between;
@@ -68,35 +64,48 @@ body{
     border-bottom:3px solid #d4a373;
 }
 
-/* LOGO SECTION */
+/* =========================
+   LOGO SECTION
+========================= */
 
 .logo-section{
 
     display:flex;
     align-items:center;
+
     gap:20px;
 }
 
+/* LOGO IMAGE */
+
 .logo-section img{
 
-    width:100px;
-    height:100px;
+    width:110px;
+    height:110px;
 
     object-fit:cover;
 
-    border-radius:15px;
+    border-radius:10px;
 
-    border:3px solid #fff;
+    border:3px solid white;
 }
+
+/* QUICK KOFFEE TEXT */
 
 .logo-section h1{
 
     color:white;
 
-    font-size:45px;
+    font-size:48px;
+
+    font-weight:normal;
+
+    letter-spacing:2px;
 }
 
-/* LOGIN BUTTON */
+/* =========================
+   LOGIN BUTTON
+========================= */
 
 .login-btn{
 
@@ -106,7 +115,7 @@ body{
 
     color:white;
 
-    padding:12px 25px;
+    padding:12px 28px;
 
     border-radius:10px;
 
@@ -117,11 +126,13 @@ body{
 
 .login-btn:hover{
 
-    background:#ffffff;
+    background:white;
     color:#3e2413;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVIGATION BAR
+========================= */
 
 .navbar{
 
@@ -129,17 +140,21 @@ body{
 
     background:#6f4e37;
 
-    padding:20px 40px;
+    padding:18px 50px;
 
     display:flex;
+    align-items:center;
+
     gap:20px;
 }
+
+/* NAV BUTTONS */
 
 .navbar a{
 
     text-decoration:none;
 
-    background:#ffffff;
+    background:white;
 
     color:#5c3317;
 
@@ -158,14 +173,18 @@ body{
     color:white;
 }
 
-/* BODY SECTION */
+/* =========================
+   BODY SECTION
+========================= */
 
 .body-section{
 
-    padding:40px;
+    padding:40px 50px;
 }
 
-/* WHY US SECTION */
+/* =========================
+   WHY US SECTION
+========================= */
 
 .why-us{
 
@@ -176,17 +195,19 @@ body{
     padding:25px;
 
     display:flex;
-    gap:30px;
-
     align-items:center;
+
+    gap:30px;
 
     margin-bottom:50px;
 }
 
+/* WHY US IMAGE */
+
 .why-us img{
 
-    width:250px;
-    height:180px;
+    width:280px;
+    height:200px;
 
     object-fit:cover;
 
@@ -195,11 +216,13 @@ body{
     border:3px solid white;
 }
 
+/* WHY TEXT */
+
 .why-text h2{
 
     color:white;
 
-    font-size:40px;
+    font-size:42px;
 
     margin-bottom:15px;
 }
@@ -210,24 +233,37 @@ body{
 
     font-size:20px;
 
-    line-height:1.6;
+    line-height:1.7;
 }
 
-/* MENU CARDS */
+/* =========================
+   MENU CARDS
+========================= */
 
 .cards{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:
-    repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
 
-    gap:30px;
+    overflow-x:auto;
+
+    padding-bottom:10px;
 }
 
-/* CARD */
+/* REMOVE SCROLLBAR */
+
+.cards::-webkit-scrollbar{
+    display:none;
+}
+
+/* =========================
+   INDIVIDUAL CARD
+========================= */
 
 .card{
+
+    min-width:320px;
 
     background:#8b5e3c;
 
@@ -237,6 +273,8 @@ body{
 
     text-align:center;
 
+    flex-shrink:0;
+
     transition:0.3s;
 }
 
@@ -244,6 +282,8 @@ body{
 
     transform:translateY(-10px);
 }
+
+/* CARD IMAGE */
 
 .card img{
 
@@ -257,6 +297,8 @@ body{
     margin-bottom:20px;
 }
 
+/* CARD TITLE */
+
 .card h3{
 
     color:white;
@@ -266,17 +308,17 @@ body{
     margin-bottom:20px;
 }
 
-/* BUTTON */
+/* CARD BUTTON */
 
 .card a{
 
     text-decoration:none;
 
-    background:#ffffff;
+    background:white;
 
     color:#5c3317;
 
-    padding:12px 20px;
+    padding:12px 22px;
 
     border-radius:10px;
 
@@ -293,7 +335,9 @@ body{
     color:white;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
 
@@ -310,42 +354,70 @@ body{
     font-size:18px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE DESIGN
+========================= */
 
 @media(max-width:900px){
 
     .header{
 
-        flex-direction:column;
-        gap:20px;
-    }
+        padding:20px;
 
-    .logo-section{
-
-        flex-direction:column;
-        text-align:center;
+        flex-direction:row;
     }
 
     .logo-section h1{
 
-        font-size:35px;
+        font-size:32px;
+    }
+
+    .logo-section img{
+
+        width:80px;
+        height:80px;
     }
 
     .navbar{
 
-        flex-wrap:wrap;
-        justify-content:center;
+        padding:15px 20px;
+
+        overflow-x:auto;
+    }
+
+    .navbar a{
+
+        white-space:nowrap;
+    }
+
+    .body-section{
+
+        padding:20px;
     }
 
     .why-us{
 
         flex-direction:column;
+
         text-align:center;
     }
 
     .why-us img{
 
         width:100%;
+        height:220px;
+    }
+
+    /* KEEP CARDS SIDE BY SIDE */
+
+    .cards{
+
+        flex-wrap:nowrap;
+    }
+
+    .card{
+
+        min-width:280px;
     }
 }
 
@@ -371,7 +443,7 @@ body{
 
         </div>
 
-        <!-- LOGIN -->
+        <!-- LOGIN BUTTON -->
 
         <a href="login.html" class="login-btn">
             Login
@@ -379,7 +451,7 @@ body{
 
     </div>
 
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION BAR -->
 
     <div class="navbar">
 
@@ -391,15 +463,13 @@ body{
 
     </div>
 
-    <!-- BODY -->
+    <!-- BODY SECTION -->
 
     <div class="body-section">
 
-        <!-- WHY US -->
+        <!-- WHY US SECTION -->
 
         <div class="why-us">
-
-            <!-- SPECIAL IMAGE -->
 
             <img src="images/whyus.jpg" alt="Why Us">
 
@@ -424,7 +494,7 @@ body{
 
         <div class="cards">
 
-            <!-- CARD 1 -->
+            <!-- ESPRESSO -->
 
             <div class="card">
 
@@ -439,7 +509,7 @@ body{
 
             </div>
 
-            <!-- CARD 2 -->
+            <!-- BREW -->
 
             <div class="card">
 
@@ -454,7 +524,7 @@ body{
 
             </div>
 
-            <!-- CARD 3 -->
+            <!-- ICED -->
 
             <div class="card">
 
