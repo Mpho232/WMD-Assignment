@@ -1,534 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="M.R Foods – Fresh, Fast & Flavorful pickup orders for BAC students. Burgers, fries, quesadillas, hotdogs and more!" />
-  <title>M.R Foods – Fresh. Fast. Flavorful.</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Google Fonts: Bebas Neue (display) + Nunito (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quick Koffee | Home</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+
+    /* BACKGROUND IMAGE */
+
+    background-image:url("images/background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+
+    width:95%;
+    max-width:1200px;
+
+    background:rgba(92, 51, 23, 0.95);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+
+.header{
+
+    width:100%;
+
+    background:#3e2413;
+
+    padding:20px 40px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    border-bottom:3px solid #d4a373;
+}
+
+/* LOGO SECTION */
+
+.logo-section{
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.logo-section img{
+
+    width:100px;
+    height:100px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:3px solid #fff;
+}
+
+.logo-section h1{
+
+    color:white;
+
+    font-size:45px;
+}
+
+/* LOGIN BUTTON */
+
+.login-btn{
+
+    text-decoration:none;
+
+    background:#d4a373;
+
+    color:white;
+
+    padding:12px 25px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.login-btn:hover{
+
+    background:#ffffff;
+    color:#3e2413;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+    width:100%;
+
+    background:#6f4e37;
+
+    padding:20px 40px;
+
+    display:flex;
+    gap:20px;
+}
+
+.navbar a{
+
+    text-decoration:none;
+
+    background:#ffffff;
+
+    color:#5c3317;
+
+    padding:12px 25px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+
+    background:#d4a373;
+    color:white;
+}
+
+/* BODY SECTION */
+
+.body-section{
+
+    padding:40px;
+}
+
+/* WHY US SECTION */
+
+.why-us{
+
+    background:#8b5e3c;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    display:flex;
+    gap:30px;
+
+    align-items:center;
+
+    margin-bottom:50px;
+}
+
+.why-us img{
+
+    width:250px;
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    border:3px solid white;
+}
+
+.why-text h2{
+
+    color:white;
+
+    font-size:40px;
+
+    margin-bottom:15px;
+}
+
+.why-text p{
+
+    color:#f5f5f5;
+
+    font-size:20px;
+
+    line-height:1.6;
+}
+
+/* MENU CARDS */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(250px,1fr));
+
+    gap:30px;
+}
+
+/* CARD */
+
+.card{
+
+    background:#8b5e3c;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img{
+
+    width:100%;
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+}
+
+.card h3{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+
+.card a{
+
+    text-decoration:none;
+
+    background:#ffffff;
+
+    color:#5c3317;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    display:inline-block;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.card a:hover{
+
+    background:#d4a373;
+    color:white;
+}
+
+/* FOOTER */
+
+.footer{
+
+    background:#3e2413;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:40px;
+
+    font-size:18px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .header{
+
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .logo-section{
+
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .logo-section h1{
+
+        font-size:35px;
+    }
+
+    .navbar{
+
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .why-us{
+
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .why-us img{
+
+        width:100%;
+    }
+}
+
+</style>
+
 </head>
+
 <body>
 
-  <!-- ========== LOADING SCREEN ========== -->
-  <div id="loader" class="loader" aria-hidden="true">
-    <div class="loader-logo">
-      <span class="loader-mr">M.R</span>
-      <span class="loader-foods">FOODS</span>
-    </div>
-    <div class="loader-bar"><div class="loader-fill"></div></div>
-  </div>
+<div class="container">
 
-  <!-- ========== STICKY NAVBAR ========== -->
-  <header class="navbar" id="navbar" role="banner">
-    <div class="nav-inner">
-      <!-- Logo -->
-      <a href="#home" class="nav-logo" aria-label="M.R Foods Home">
-        <span class="logo-mr">M.R</span><span class="logo-foods">Foods</span>
-      </a>
+    <!-- HEADER -->
 
-      <!-- Desktop nav links -->
-      <nav class="nav-links" role="navigation" aria-label="Main navigation">
-        <a href="#home"    class="nav-link active" data-section="home">Home</a>
-        <a href="#menu"    class="nav-link" data-section="menu">Menu</a>
-        <a href="#specials" class="nav-link" data-section="specials">Specials</a>
-        <a href="#order"   class="nav-link" data-section="order">Order</a>
-        <a href="#about"   class="nav-link" data-section="about">About</a>
-        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
-      </nav>
+    <div class="header">
 
-      <!-- Cart icon -->
-      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
-        <i class="fa-solid fa-bag-shopping"></i>
-        <span class="cart-count" id="cartCount">0</span>
-      </button>
+        <div class="logo-section">
 
-      <!-- Hamburger for mobile -->
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+            <!-- LOGO IMAGE -->
+
+            <img src="images/logo.jpg" alt="Logo">
+
+            <h1>Quick Koffee</h1>
+
+        </div>
+
+        <!-- LOGIN -->
+
+        <a href="login.html" class="login-btn">
+            Login
+        </a>
+
     </div>
 
-    <!-- Mobile nav drawer -->
-    <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
-      <a href="#home"     class="mob-link" data-section="home">Home</a>
-      <a href="#menu"     class="mob-link" data-section="menu">Menu</a>
-      <a href="#specials" class="mob-link" data-section="specials">Specials</a>
-      <a href="#order"    class="mob-link" data-section="order">Order</a>
-      <a href="#about"    class="mob-link" data-section="about">About</a>
-      <a href="#contact"  class="mob-link" data-section="contact">Contact</a>
-    </nav>
-  </header>
+    <!-- NAVIGATION -->
 
-  <!-- ========== CART SIDEBAR ========== -->
-  <aside class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart" aria-hidden="true">
-    <div class="cart-header">
-      <h2><i class="fa-solid fa-bag-shopping"></i> Your Order</h2>
-      <button class="cart-close" id="cartClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
+    <div class="navbar">
+
+        <a href="index.html">Home</a>
+
+        <a href="menu.html">Menu</a>
+
+        <a href="cart.html">Cart</a>
+
     </div>
-    <div class="cart-body" id="cartBody">
-      <!-- Cart items injected by JS -->
-      <div class="cart-empty" id="cartEmpty">
-        <i class="fa-solid fa-bowl-food"></i>
-        <p>Your cart is empty</p>
-        <a href="#menu" class="btn-sm" id="cartMenuLink">Browse Menu</a>
-      </div>
-    </div>
-    <div class="cart-footer" id="cartFooter" style="display:none;">
-      <div class="cart-total">
-        <span>Total</span>
-        <span id="cartTotal">P0.00</span>
-      </div>
-      <button class="btn-orange w-full" id="checkoutBtn">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-  </aside>
-  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <!-- ========== CHECKOUT MODAL ========== -->
-  <div class="modal-overlay" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
-    <div class="modal-box">
-      <button class="modal-close" id="modalClose" aria-label="Close checkout"><i class="fa-solid fa-xmark"></i></button>
-      <h2 id="checkoutTitle"><i class="fa-solid fa-clipboard-list"></i> Confirm Pickup Order</h2>
-      <p class="modal-sub">Fill in your details and we'll have your order ready!</p>
+    <!-- BODY -->
 
-      <div class="modal-order-summary" id="modalOrderSummary"></div>
+    <div class="body-section">
 
-      <div class="modal-total-row">
-        <span>Order Total</span>
-        <span id="modalTotal">P0.00</span>
-      </div>
+        <!-- WHY US -->
 
-      <div class="form-group">
-        <label for="custName">Your Name</label>
-        <input type="text" id="custName" placeholder="e.g. Mpho Mokoena" autocomplete="name" />
-      </div>
-      <div class="form-group">
-        <label for="custPhone">Phone Number</label>
-        <input type="tel" id="custPhone" placeholder="e.g. 71 234 567" autocomplete="tel" />
-      </div>
-      <div class="form-group">
-        <label for="pickupTime">Preferred Pickup Time</label>
-        <select id="pickupTime">
-          <option value="">-- Select time --</option>
-          <option>08:00 AM</option>
-          <option>09:00 AM</option>
-          <option>10:00 AM</option>
-          <option>11:00 AM</option>
-          <option>12:00 PM</option>
-          <option>01:00 PM</option>
-          <option>02:00 PM</option>
-          <option>03:00 PM</option>
-          <option>04:00 PM</option>
-          <option>05:00 PM</option>
-          <option>06:00 PM</option>
-        </select>
-      </div>
-      <button class="btn-orange w-full" id="placeOrderBtn">Place Order <i class="fa-solid fa-check"></i></button>
-    </div>
-        </div>
-    <!-- ========== SUCCESS POPUP ========== -->
-  <div class="success-overlay" id="successOverlay" aria-hidden="true">
-    <div class="success-box">
-      <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
-      <h2>Order Placed! 🎉</h2>
-      <p id="successMsg">Thanks! Your order is being prepared. Come pick it up at your selected time.</p>
-      <button class="btn-orange" id="successClose">Back to Menu</button>
-    </div>
-  </div>
+        <div class="why-us">
 
-  <!-- ========== MAIN CONTENT ========== -->
-  <main>
+            <!-- SPECIAL IMAGE -->
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home" aria-label="Hero">
-      <div class="hero-bg-pattern"></div>
-      <div class="hero-content">
-        <div class="hero-tag"><i class="fa-solid fa-fire"></i> BAC Students' Favourite</div>
-        <h1 class="hero-headline">
-          Fresh.<br/>Fast.<br/><span class="accent">Flavorful.</span>
-        </h1>
-        <p class="hero-sub">
-          Real food, real fast — right outside BAC campus.<br/>
-          Order online, pick up in minutes. No queues. No stress.
-        </p>
-        <div class="hero-cta">
-          <a href="#order" class="btn-orange btn-lg">Order Now <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#menu" class="btn-ghost btn-lg">See Menu</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat"><span>500+</span><small>Daily Orders</small></div>
-          <div class="stat-div"></div>
-          <div class="stat"><span>15 min</span><small>Avg Pickup</small></div>
-          <div class="stat-div"></div>
-          <div class="stat"><span>5★</span><small>Student Rating</small></div>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-plate">
-          <!-- SVG illustration of a burger -->
-          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="160" cy="160" r="155" fill="#fff3e0" opacity="0.6"/>
-            <!-- bun top -->
-            <ellipse cx="160" cy="100" rx="90" ry="45" fill="#e65100"/>
-            <ellipse cx="160" cy="100" rx="90" ry="45" fill="url(#bunGrad)"/>
-            <ellipse cx="160" cy="95" rx="85" ry="38" fill="#f57c00"/>
-            <!-- sesame seeds -->
-            <ellipse cx="130" cy="82" rx="6" ry="3" fill="#bf360c" transform="rotate(-20,130,82)"/>
-            <ellipse cx="160" cy="76" rx="6" ry="3" fill="#bf360c" transform="rotate(5,160,76)"/>
-            <ellipse cx="190" cy="84" rx="6" ry="3" fill="#bf360c" transform="rotate(15,190,84)"/>
-            <!-- lettuce -->
-            <ellipse cx="160" cy="138" rx="100" ry="14" fill="#4caf50"/>
-            <path d="M60,138 Q80,124 100,138 Q120,124 140,138 Q160,124 180,138 Q200,124 220,138 Q240,124 260,138" fill="none" stroke="#81c784" stroke-width="4"/>
-            <!-- cheese -->
-            <rect x="70" y="144" width="180" height="12" rx="4" fill="#fdd835"/>
-            <!-- patty -->
-            <ellipse cx="160" cy="168" rx="95" ry="20" fill="#5d4037"/>
-            <ellipse cx="160" cy="162" rx="90" ry="16" fill="#6d4c41"/>
-            <!-- tomato -->
-            <ellipse cx="160" cy="185" rx="85" ry="10" fill="#e53935" opacity="0.85"/>
-            <!-- bun bottom -->
-            <ellipse cx="160" cy="200" rx="100" ry="22" fill="#f57c00"/>
-            <ellipse cx="160" cy="218" rx="100" ry="14" fill="#e65100"/>
-            <!-- shine on top bun -->
-            <ellipse cx="135" cy="82" rx="25" ry="10" fill="#fff" opacity="0.18" transform="rotate(-15,135,82)"/>
-            <defs>
-              <radialGradient id="bunGrad" cx="50%" cy="30%" r="60%">
-                <stop offset="0%" stop-color="#ff8f00"/>
-                <stop offset="100%" stop-color="#e65100"/>
-              </radialGradient>
-            </defs>
-          </svg>
-        </div>
-        <div class="hero-badge hero-badge-1"><i class="fa-solid fa-fire"></i> Hot & Fresh</div>
-        <div class="hero-badge hero-badge-2"><i class="fa-solid fa-tag"></i> Student Deals</div>
-      </div>
-      <div class="hero-scroll-hint">
-        <span>Scroll down</span>
-        <i class="fa-solid fa-chevron-down"></i>
-      </div>
-    </section>
+            <img src="images/whyus.jpg" alt="Why Us">
 
-    <!-- ===== FEATURES STRIP ===== -->
-    <section class="features-strip" aria-label="Key features">
-      <div class="container">
-        <div class="feature-item">
-          <i class="fa-solid fa-bolt"></i>
-          <div>
-            <strong>Lightning Fast</strong>
-            <span>Ready in 15 minutes</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <i class="fa-solid fa-hand-holding-heart"></i>
-          <div>
-            <strong>Fresh Ingredients</strong>
-            <span>Made to order daily</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <div>
-            <strong>Student Friendly</strong>
-            <span>Prices BAC students love</span>
-          </div>
-        </div>
-        <div class="feature-item">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <div>
-            <strong>Order Online</strong>
-            <span>Skip the queue, order ahead</span>
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="why-text">
 
-    <!-- ===== MENU SECTION ===== -->
-    <section class="menu-section" id="menu" aria-label="Menu">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">What We Serve</span>
-          <h2 class="section-title">Our <span class="accent">Menu</span></h2>
-          <p class="section-sub">Fresh food made fast — pick your favourite and order in seconds.</p>
-        </div>
+                <h2>Why Us?</h2>
 
-        <!-- Category Filter Tabs -->
-        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
-          <button class="tab-btn active" data-cat="all" role="tab" aria-selected="true">All</button>
-          <button class="tab-btn" data-cat="burgers" role="tab" aria-selected="false">🍔 Burgers</button>
-          <button class="tab-btn" data-cat="fries" role="tab" aria-selected="false">🍟 Fries</button>
-          <button class="tab-btn" data-cat="quesadillas" role="tab" aria-selected="false">🌯 Quesadillas</button>
-          <button class="tab-btn" data-cat="hotdogs" role="tab" aria-selected="false">🌭 Hotdogs</button>
-          <button class="tab-btn" data-cat="drinks" role="tab" aria-selected="false">🥤 Drinks</button>
-        </div>
+                <p>
+                    At Quick Koffee we serve rich,
+                    fresh and satisfying coffee
+                    experiences every single day.
+                    From espresso classics to iced
+                    coffee specials, we make every
+                    cup with passion and flavour.
+                </p>
 
-        <!-- Menu Grid – injected by JS -->
-        <div class="menu-grid" id="menuGrid" role="tabpanel"></div>
-      </div>
-    </section>
-
-    <!-- ===== SPECIALS SECTION ===== -->
-    <section class="specials-section" id="specials" aria-label="Student specials">
-      <div class="specials-bg-text" aria-hidden="true">DEALS</div>
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">🎓 Student Only</span>
-          <h2 class="section-title">Hot <span class="accent">Specials</span></h2>
-          <p class="section-sub">Exclusive combos designed for BAC students. More food, less spend.</p>
-        </div>
-        <div class="specials-grid" id="specialsGrid"></div>
-      </div>
-    </section>
-      <!-- ===== ORDER SECTION ===== -->
-    <section class="order-section" id="order" aria-label="How to order">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">How It Works</span>
-          <h2 class="section-title">Order in <span class="accent">3 Steps</span></h2>
-        </div>
-        <div class="steps-row">
-          <div class="step-card">
-            <div class="step-num">01</div>
-            <div class="step-icon"><i class="fa-solid fa-utensils"></i></div>
-            <h3>Browse the Menu</h3>
-            <p>Choose from burgers, fries, quesadillas, hotdogs and drinks.</p>
-          </div>
-          <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-          <div class="step-card">
-            <div class="step-num">02</div>
-            <div class="step-icon"><i class="fa-solid fa-bag-shopping"></i></div>
-            <h3>Add to Cart</h3>
-            <p>Add your items to the cart and review your order anytime.</p>
-          </div>
-          <div class="step-arrow"><i class="fa-solid fa-arrow-right"></i></div>
-          <div class="step-card">
-            <div class="step-num">03</div>
-            <div class="step-icon"><i class="fa-solid fa-person-walking"></i></div>
-            <h3>Pickup & Enjoy</h3>
-            <p>We'll prepare your order. Come collect it at the agreed time!</p>
-          </div>
-        </div>
-        <div class="order-cta">
-          <a href="#menu" class="btn-orange btn-lg">Start Your Order <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT SECTION ===== -->
-    <section class="about-section" id="about" aria-label="About M.R Foods">
-      <div class="container about-inner">
-        <div class="about-visual">
-          <div class="about-img-wrapper">
-            <!-- Decorative food illustration -->
-            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <rect width="300" height="300" rx="24" fill="#fff3e0"/>
-              <!-- Hot dog -->
-              <ellipse cx="150" cy="80" rx="80" ry="28" fill="#f57c00"/>
-              <ellipse cx="150" cy="80" rx="65" ry="18" fill="#ffcc80"/>
-              <rect x="90" y="72" width="120" height="16" rx="8" fill="#c62828"/>
-              <!-- Fries box -->
-              <rect x="80" y="150" width="140" height="100" rx="10" fill="#e53935"/>
-              <rect x="95" y="135" width="110" height="25" rx="6" fill="#c62828"/>
-              <!-- Fries -->
-              <rect x="105" y="108" width="12" height="50" rx="6" fill="#fdd835"/>
-              <rect x="122" y="100" width="12" height="58" rx="6" fill="#fdd835"/>
-              <rect x="139" y="106" width="12" height="52" rx="6" fill="#fdd835"/>
-              <rect x="156" y="98" width="12" height="60" rx="6" fill="#fdd835"/>
-              <rect x="173" y="110" width="12" height="48" rx="6" fill="#fdd835"/>
-              <!-- text on box -->
-              <text x="150" y="205" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="22" fill="#fff">M.R</text>
-              <text x="150" y="228" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="14" fill="#ffcdd2">FOODS</text>
-            </svg>
-          </div>
-          <div class="about-tag-float"><i class="fa-solid fa-fire"></i> Since 2022</div>
-        </div>
-        <div class="about-content">
-          <span class="section-tag">Our Story</span>
-          <h2 class="section-title">Made with <span class="accent">Passion</span></h2>
-          <p>M.R Foods was born right next to Botswana Accountancy College — built for the students who need real food, fast. We know BAC life: tight schedules, long lectures, and not enough time for a proper meal.</p>
-          <p>That's why everything on our menu is freshly prepared, affordably priced, and ready in minutes. From our signature crispy burgers to loaded quesadillas, every bite is made with care.</p>
-          <div class="about-chips">
-            <span><i class="fa-solid fa-check"></i> Pickup Only</span>
-            <span><i class="fa-solid fa-check"></i> Fresh Daily</span>
-            <span><i class="fa-solid fa-check"></i> Student Prices</span>
-            <span><i class="fa-solid fa-check"></i> Halal Friendly</span>
-          </div>
-          <a href="#menu" class="btn-orange">Explore Menu <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== LOCATION SECTION ===== -->
-    <section class="location-section" id="location" aria-label="Our location">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Find Us</span>
-          <h2 class="section-title">Our <span class="accent">Location</span></h2>
-        </div>
-        <div class="location-inner">
-          <div class="location-map">
-            <!-- Decorative map placeholder -->
-            <div class="map-placeholder">
-              <i class="fa-solid fa-map-location-dot"></i>
-              <p>Near BAC Campus<br/><strong>Gaborone, Botswana</strong></p>
-              <span class="map-badge">📍 Open Now</span>
             </div>
-          </div>
-          <div class="location-info">
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-              <div>
-                <h4>Address</h4>
-                <p>Plot 50374, Near BAC Campus<br/>Gaborone, Botswana</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
-              <div>
-                <h4>Business Hours</h4>
-                <p>Mon – Fri: 07:30 AM – 06:00 PM<br/>Saturday: 08:00 AM – 04:00 PM<br/>Sunday: Closed</p>
-              </div>
-            </div>
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
-              <div>
-                <h4>Phone</h4>
-                <p>+267 71 000 000</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="contact-section" id="contact" aria-label="Contact us">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get in Touch</span>
-          <h2 class="section-title">Contact <span class="accent">Us</span></h2>
-          <p class="section-sub">Questions, feedback or catering enquiries? We'd love to hear from you.</p>
         </div>
-        <div class="contact-inner">
-          <div class="contact-links">
-            <a href="tel:+26771000000" class="contact-card">
-              <i class="fa-solid fa-phone"></i>
-              <div>
-                <strong>Call Us</strong>
-                <span>+267 71 000 000</span>
-              </div>
-            </a>
-            <a href="https://wa.me/26771000000" class="contact-card" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-whatsapp"></i>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>Chat with us</span>
-              </div>
-            </a>
-            <a href="https://instagram.com" class="contact-card" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-instagram"></i>
-              <div>
-                <strong>Instagram</strong>
-                <span>@mrfoods_bac</span>
-              </div>
-            </a>
-            <a href="https://facebook.com" class="contact-card" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-facebook-f"></i>
-              <div>
-                <strong>Facebook</strong>
-                <span>M.R Foods Gaborone</span>
-              </div>
-            </a>
-          </div>
-          <!-- Simple contact message form (frontend only) -->
-          <form class="contact-form" id="contactForm" novalidate>
-            <h3>Send a Message</h3>
-            <div class="form-group">
-              <label for="contactName">Name</label>
-              <input type="text" id="contactName" placeholder="Your name" required />
-            </div>
-            <div class="form-group">
-              <label for="contactEmail">Email</label>
-              <input type="email" id="contactEmail" placeholder="your@email.com" required />
-            </div>
-            <div class="form-group">
-              <label for="contactMsg">Message</label>
-              <textarea id="contactMsg" rows="4" placeholder="How can we help?" required></textarea>
-            </div>
-            <button type="submit" class="btn-orange w-full">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-            <p class="form-sent" id="formSent" style="display:none;"><i class="fa-solid fa-circle-check"></i> Message sent! We'll get back to you soon.</p>
-          </form>
-        </div>
-      </div>
-    </section>
 
-  </main>
+        <!-- MENU CARDS -->
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Brand -->
-        <div class="footer-brand">
-          <span class="footer-logo"><span>M.R</span>Foods</span>
-          <p>Fresh, fast food for BAC students and the Gaborone community. Order online, pickup in minutes.</p>
-          <div class="social-links">
-            <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://wa.me/26771000000" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://tiktok.com" aria-label="TikTok" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-tiktok"></i></a>
-          </div>
+        <div class="cards">
+
+            <!-- CARD 1 -->
+
+            <div class="card">
+
+                <img src="images/espresso.jpg"
+                alt="Espresso">
+
+                <h3>Espresso Classics</h3>
+
+                <a href="menu.html">
+                    View Catalog
+                </a>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="card">
+
+                <img src="images/brew.jpg"
+                alt="Brewed Coffee">
+
+                <h3>Brew & Filter Coffee</h3>
+
+                <a href="menu.html">
+                    View Catalog
+                </a>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="card">
+
+                <img src="images/iced.jpg"
+                alt="Iced Coffee">
+
+                <h3>Iced & Cold Drinks</h3>
+
+                <a href="menu.html">
+                    View Catalog
+                </a>
+
+            </div>
+
         </div>
-        <!-- Quick links -->
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#specials">Specials</a></li>
-            <li><a href="#order">Order Online</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Hours -->
-        <div class="footer-col">
-          <h4>Business Hours</h4>
-          <ul class="hours-list">
-            <li><span>Mon – Fri</span><span>07:30 – 18:00</span></li>
-            <li><span>Saturday</span><span>08:00 – 16:00</span></li>
-            <li><span>Sunday</span><span class="closed">Closed</span></li>
-          </ul>
-        </div>
-        <!-- Menu categories -->
-        <div class="footer-col">
-          <h4>Menu</h4>
-          <ul>
-            <li><a href="#menu">🍔 Burgers</a></li>
-            <li><a href="#menu">🍟 French Fries</a></li>
-            <li><a href="#menu">🌯 Quesadillas</a></li>
-            <li><a href="#menu">🌭 Hotdogs</a></li>
-            <li><a href="#menu">🥤 Drinks</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© <span id="year"></span> M.R Foods. All rights reserved. | Gaborone, Botswana</p>
-        <p>Pickup only · No delivery</p>
-      </div>
+
     </div>
-  </footer>
 
-  <!-- ========== SCROLL TO TOP ========== -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top" style="display:none;">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
+    <!-- FOOTER -->
 
-  <script src="script.js"></script>
+    <div class="footer">
+
+        © M.R Foods. All Rights Reserved.
+
+    </div>
+
+</div>
+
 </body>
 </html>
-
