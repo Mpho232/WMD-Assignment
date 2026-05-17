@@ -1,1 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quick Koffiee | Menu</title>
+
+<style>
+
+/* Copy your exact same global styles from index.html here */
+/* (the *, body, .container, .header, .logo-section,
+   .login-btn, .navbar, .footer styles) */
+
+/* MENU PAGE SPECIFIC STYLES */
+
+.body-section {
+    padding: 40px 50px;
+}
+
+.page-title {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.category {
+    margin-bottom: 50px;
+}
+
+.category h2 {
+    color: #d4a373;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 10px;
+}
+
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.menu-item {
+    background: #8b5e3c;
+    border-radius: 20px;
+    padding: 20px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.menu-item h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.menu-item p {
+    color: #f5deb3;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.menu-item .price {
+    color: #d4a373;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-btn {
+    background: white;
+    color: #5c3317;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #d4a373;
+    color: white;
+}
+
+@media(max-width: 900px) {
+    .body-section { padding: 20px; }
+    .menu-grid { justify-content: center; }
+    .menu-item { width: 100%; max-width: 340px; }
+}
+
+</style>
+
+</head>
+<body>
+<div class="container">
+
+    <!-- HEADER — same as index.html -->
+    <header class="header">
+        <div class="logo-section">
+            <img src="images/logo.jpg" alt="Quick Koffiee Logo">
+            <h1>Quick Koffiee</h1>
+        </div>
+        <a href="login.html" class="login-btn">Login</a>
+    </header>
+
+    <!-- NAVBAR — "Menu" is active this time -->
+    <nav class="navbar" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="menu.html" class="active">Menu</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+
+    <main class="body-section">
+
+        <h1 class="page-title">Our Menu</h1>
+
+        <!-- CATEGORY 1: ESPRESSO -->
+        <section class="category">
+            <h2>☕ Espresso Classics</h2>
+            <div class="menu-grid">
+
+                <div class="menu-item">
+                    <img src="images/espresso.jpg" alt="Espresso">
+                    <h3>Espresso</h3>
+                    <p>Strong and bold single shot</p>
+                    <div class="price">P15.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/cappuccino.jpg" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>Espresso with steamed milk foam</p>
+                    <div class="price">P25.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/latte.jpg" alt="Latte">
+                    <h3>Latte</h3>
+                    <p>Smooth espresso with lots of milk</p>
+                    <div class="price">P28.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORY 2: BREW & FILTER -->
+        <section class="category">
+            <h2>🫖 Brew & Filter Coffee</h2>
+            <div class="menu-grid">
+
+                <div class="menu-item">
+                    <img src="images/brew.jpg" alt="Filter Coffee">
+                    <h3>Filter Coffee</h3>
+                    <p>Classic drip brewed coffee</p>
+                    <div class="price">P18.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/pour.jpg" alt="Pour Over">
+                    <h3>Pour Over</h3>
+                    <p>Hand brewed for rich flavour</p>
+                    <div class="price">P30.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORY 3: ICED -->
+        <section class="category">
+            <h2>🧊 Iced & Cold Drinks</h2>
+            <div class="menu-grid">
+
+                <div class="menu-item">
+                    <img src="images/iced.jpg" alt="Iced Coffee">
+                    <h3>Iced Coffee</h3>
+                    <p>Chilled coffee over ice</p>
+                    <div class="price">P30.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/frappe.jpg" alt="Frappe">
+                    <h3>Frappe</h3>
+                    <p>Blended iced coffee with cream</p>
+                    <div class="price">P35.00</div>
+                    <button class="add-btn">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        &copy; 2025 Quick Koffiee. All Rights Reserved.
+    </footer>
+
+</div>
+</body>
+</html>
