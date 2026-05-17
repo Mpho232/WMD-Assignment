@@ -8,40 +8,183 @@
 
 <style>
 
-/* Copy your exact same global styles from index.html here */
-/* (the *, body, .container, .header, .logo-section,
-   .login-btn, .navbar, .footer styles) */
+/* =========================
+   GLOBAL RESET
+========================= */
 
-/* MENU PAGE SPECIFIC STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(92, 51, 23, 0.95);
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    background: #3e2413;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #d4a373;
+}
+
+/* =========================
+   LOGO SECTION
+========================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+    text-decoration: none;
+    background: #d4a373;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: white;
+    color: #3e2413;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    width: 100%;
+    background: #6f4e37;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    background: white;
+    color: #5c3317;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #d4a373;
+    color: white;
+}
+
+/* ACTIVE NAV LINK */
+
+.navbar a.active {
+    background: #d4a373;
+    color: white;
+}
+
+/* =========================
+   BODY SECTION
+========================= */
 
 .body-section {
     padding: 40px 50px;
 }
 
+/* =========================
+   PAGE TITLE
+========================= */
+
 .page-title {
     color: white;
     font-size: 38px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     letter-spacing: 1px;
+    border-bottom: 3px solid #d4a373;
+    padding-bottom: 15px;
 }
 
+/* =========================
+   CATEGORY SECTION
+========================= */
+
 .category {
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 .category h2 {
     color: #d4a373;
     font-size: 28px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #d4a373;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #6f4e37;
     padding-bottom: 10px;
 }
+
+/* =========================
+   MENU GRID
+========================= */
 
 .menu-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 25px;
 }
+
+/* =========================
+   MENU ITEM CARD
+========================= */
 
 .menu-item {
     background: #8b5e3c;
@@ -62,6 +205,7 @@
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 15px;
+    border: 2px solid #d4a373;
 }
 
 .menu-item h3 {
@@ -74,14 +218,19 @@
     color: #f5deb3;
     font-size: 14px;
     margin-bottom: 12px;
+    line-height: 1.5;
 }
 
-.menu-item .price {
+/* PRICE DISPLAY */
+
+.price {
     color: #d4a373;
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+/* ADD TO CART BUTTON */
 
 .add-btn {
     background: white;
@@ -93,6 +242,7 @@
     cursor: pointer;
     font-size: 15px;
     transition: 0.3s;
+    width: 100%;
 }
 
 .add-btn:hover {
@@ -100,10 +250,59 @@
     color: white;
 }
 
-@media(max-width: 900px) {
-    .body-section { padding: 20px; }
-    .menu-grid { justify-content: center; }
-    .menu-item { width: 100%; max-width: 340px; }
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #3e2413;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .logo-section h1 {
+        font-size: 32px;
+    }
+
+    .logo-section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        overflow-x: auto;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+
+    .body-section {
+        padding: 20px;
+    }
+
+    .menu-grid {
+        justify-content: center;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 340px;
+    }
 }
 
 </style>
@@ -112,107 +311,167 @@
 <body>
 <div class="container">
 
-    <!-- HEADER — same as index.html -->
+    <!-- ========================
+         HEADER
+    ======================== -->
+
     <header class="header">
+
         <div class="logo-section">
             <img src="images/logo.jpg" alt="Quick Koffiee Logo">
             <h1>Quick Koffiee</h1>
         </div>
+
         <a href="login.html" class="login-btn">Login</a>
+
     </header>
 
-    <!-- NAVBAR — "Menu" is active this time -->
+    <!-- ========================
+         NAVIGATION
+         "Menu" is active on this page
+    ======================== -->
+
     <nav class="navbar" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="menu.html" class="active">Menu</a>
         <a href="cart.html">Cart</a>
     </nav>
 
+    <!-- ========================
+         MAIN CONTENT
+    ======================== -->
+
     <main class="body-section">
 
-        <h1 class="page-title">Our Menu</h1>
+        <h1 class="page-title">☕ Our Full Menu</h1>
 
-        <!-- CATEGORY 1: ESPRESSO -->
+        <!-- ========================
+             CATEGORY 1: ESPRESSO
+        ======================== -->
+
         <section class="category">
+
             <h2>☕ Espresso Classics</h2>
+
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <img src="images/espresso.jpg" alt="Espresso">
                     <h3>Espresso</h3>
-                    <p>Strong and bold single shot</p>
+                    <p>Strong and bold single shot, rich with flavour</p>
                     <div class="price">P15.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
                 <div class="menu-item">
                     <img src="images/cappuccino.jpg" alt="Cappuccino">
                     <h3>Cappuccino</h3>
-                    <p>Espresso with steamed milk foam</p>
+                    <p>Espresso topped with thick steamed milk foam</p>
                     <div class="price">P25.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
                 <div class="menu-item">
                     <img src="images/latte.jpg" alt="Latte">
                     <h3>Latte</h3>
-                    <p>Smooth espresso with lots of milk</p>
+                    <p>Smooth espresso with creamy steamed milk</p>
                     <div class="price">P28.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/americano.jpg" alt="Americano">
+                    <h3>Americano</h3>
+                    <p>Espresso diluted with hot water, rich and clean</p>
+                    <div class="price">P20.00</div>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
             </div>
+
         </section>
 
-        <!-- CATEGORY 2: BREW & FILTER -->
+        <!-- ========================
+             CATEGORY 2: BREW & FILTER
+        ======================== -->
+
         <section class="category">
+
             <h2>🫖 Brew & Filter Coffee</h2>
+
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <img src="images/brew.jpg" alt="Filter Coffee">
                     <h3>Filter Coffee</h3>
-                    <p>Classic drip brewed coffee</p>
+                    <p>Classic drip brewed for a smooth balanced cup</p>
                     <div class="price">P18.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
                 <div class="menu-item">
                     <img src="images/pour.jpg" alt="Pour Over">
                     <h3>Pour Over</h3>
-                    <p>Hand brewed for rich flavour</p>
+                    <p>Hand brewed slowly for a rich layered flavour</p>
                     <div class="price">P30.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/french.jpg" alt="French Press">
+                    <h3>French Press</h3>
+                    <p>Full body brew, bold and deeply satisfying</p>
+                    <div class="price">P25.00</div>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
             </div>
+
         </section>
 
-        <!-- CATEGORY 3: ICED -->
+        <!-- ========================
+             CATEGORY 3: ICED & COLD
+        ======================== -->
+
         <section class="category">
+
             <h2>🧊 Iced & Cold Drinks</h2>
+
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <img src="images/iced.jpg" alt="Iced Coffee">
                     <h3>Iced Coffee</h3>
-                    <p>Chilled coffee over ice</p>
+                    <p>Chilled espresso poured over crushed ice</p>
                     <div class="price">P30.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
                 <div class="menu-item">
                     <img src="images/frappe.jpg" alt="Frappe">
                     <h3>Frappe</h3>
-                    <p>Blended iced coffee with cream</p>
+                    <p>Blended iced coffee topped with whipped cream</p>
                     <div class="price">P35.00</div>
-                    <button class="add-btn">Add to Cart</button>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/coldbrw.jpg" alt="Cold Brew">
+                    <h3>Cold Brew</h3>
+                    <p>Steeped overnight for smooth, low-bitterness taste</p>
+                    <div class="price">P32.00</div>
+                    <button class="add-btn" onclick="window.location.href='cart.html'">Add to Cart</button>
                 </div>
 
             </div>
+
         </section>
 
     </main>
+
+    <!-- ========================
+         FOOTER
+    ======================== -->
 
     <footer class="footer">
         &copy; 2025 Quick Koffiee. All Rights Reserved.
