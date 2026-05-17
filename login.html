@@ -8,7 +8,137 @@
 
 <style>
 
-/* Same global styles as index.html */
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(92, 51, 23, 0.95);
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    background: #3e2413;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #d4a373;
+}
+
+/* =========================
+   LOGO SECTION
+========================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   LOGIN BUTTON
+   (Shows "Back to Home" when already on login page)
+========================= */
+
+.login-btn {
+    text-decoration: none;
+    background: #d4a373;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: white;
+    color: #3e2413;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    width: 100%;
+    background: #6f4e37;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    background: white;
+    color: #5c3317;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #d4a373;
+    color: white;
+}
+
+/* ACTIVE NAV LINK */
+
+.navbar a.active {
+    background: #d4a373;
+    color: white;
+}
+
+/* =========================
+   BODY SECTION
+========================= */
 
 .body-section {
     padding: 60px 20px;
@@ -18,16 +148,21 @@
     min-height: 70vh;
 }
 
-/* LOGIN CARD */
+/* =========================
+   LOGIN CARD
+========================= */
 
 .login-card {
     background: #8b5e3c;
     border-radius: 20px;
     padding: 45px 40px;
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
     text-align: center;
+    border: 2px solid #d4a373;
 }
+
+/* LOGIN CARD HEADING */
 
 .login-card h2 {
     color: white;
@@ -35,13 +170,17 @@
     margin-bottom: 8px;
 }
 
-.login-card p {
+/* LOGIN CARD SUBTITLE */
+
+.login-card p.subtitle {
     color: #f5deb3;
     font-size: 15px;
     margin-bottom: 30px;
 }
 
-/* FORM INPUTS */
+/* =========================
+   FORM GROUPS
+========================= */
 
 .form-group {
     margin-bottom: 20px;
@@ -55,6 +194,8 @@
     font-weight: bold;
     margin-bottom: 8px;
 }
+
+/* TEXT INPUTS */
 
 .form-group input {
     width: 100%;
@@ -77,7 +218,30 @@
     color: #c9a87a;
 }
 
-/* LOGIN SUBMIT BUTTON */
+/* =========================
+   FORGOT PASSWORD LINK
+========================= */
+
+.forgot {
+    text-align: right;
+    margin-top: -12px;
+    margin-bottom: 22px;
+}
+
+.forgot a {
+    color: #d4a373;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.forgot a:hover {
+    color: white;
+}
+
+/* =========================
+   LOGIN SUBMIT BUTTON
+========================= */
 
 .login-submit {
     width: 100%;
@@ -90,7 +254,6 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
 }
 
 .login-submit:hover {
@@ -98,44 +261,124 @@
     color: #3e2413;
 }
 
-/* REGISTER LINK */
+/* =========================
+   DIVIDER
+========================= */
 
-.register-link {
-    margin-top: 20px;
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #d4a373;
+    opacity: 0.4;
+}
+
+.divider span {
     color: #f5deb3;
-    font-size: 14px;
-}
-
-.register-link a {
-    color: #d4a373;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.register-link a:hover {
-    color: white;
-}
-
-/* FORGOT PASSWORD */
-
-.forgot {
-    text-align: right;
-    margin-top: -12px;
-    margin-bottom: 20px;
-}
-
-.forgot a {
-    color: #d4a373;
     font-size: 13px;
-    text-decoration: none;
 }
 
-.forgot a:hover {
+/* =========================
+   REGISTER BUTTON
+========================= */
+
+.register-btn {
+    display: block;
+    width: 100%;
+    background: transparent;
+    color: #d4a373;
+    border: 2px solid #d4a373;
+    padding: 13px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.register-btn:hover {
+    background: #d4a373;
     color: white;
 }
 
-@media(max-width: 900px) {
-    .login-card { padding: 30px 22px; }
+/* =========================
+   BACK TO MENU LINK
+========================= */
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    color: #f5deb3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #d4a373;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #3e2413;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .logo-section h1 {
+        font-size: 32px;
+    }
+
+    .logo-section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        overflow-x: auto;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+
+    .body-section {
+        padding: 30px 15px;
+        min-height: 60vh;
+    }
+
+    .login-card {
+        padding: 30px 22px;
+    }
 }
 
 </style>
@@ -144,53 +387,85 @@
 <body>
 <div class="container">
 
+    <!-- ========================
+         HEADER
+         Login button shows "Home" since user is already on login page
+    ======================== -->
+
     <header class="header">
+
         <div class="logo-section">
             <img src="images/logo.jpg" alt="Quick Koffiee Logo">
             <h1>Quick Koffiee</h1>
         </div>
-        <a href="login.html" class="login-btn">Login</a>
+
+        <!-- LINKS BACK TO HOME WHEN ALREADY ON LOGIN -->
+
+        <a href="index.html" class="login-btn">Home</a>
+
     </header>
 
-    <!-- No active link for login since it's not in the navbar -->
+    <!-- ========================
+         NAVIGATION
+         No active link since Login is not in the nav bar
+    ======================== -->
+
     <nav class="navbar" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="cart.html">Cart</a>
     </nav>
 
+    <!-- ========================
+         MAIN CONTENT
+    ======================== -->
+
     <main class="body-section">
 
         <div class="login-card">
 
-            <h2>Welcome Back ☕</h2>
-            <p>Login to your Quick Koffiee account</p>
+            <!-- HEADING -->
 
-            <form>
+            <h2>Welcome Back ☕</h2>
+            <p class="subtitle">Login to your Quick Koffiee account</p>
+
+            <!-- LOGIN FORM -->
+
+            <form action="#" method="post">
+
+                <!-- EMAIL -->
 
                 <div class="form-group">
                     <label for="email">Email Address</label>
                     <input
                         type="email"
                         id="email"
+                        name="email"
                         placeholder="you@example.com"
                         required
                     >
                 </div>
+
+                <!-- PASSWORD -->
 
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input
                         type="password"
                         id="password"
+                        name="password"
                         placeholder="Enter your password"
                         required
                     >
                 </div>
 
+                <!-- FORGOT PASSWORD -->
+
                 <div class="forgot">
                     <a href="#">Forgot password?</a>
                 </div>
+
+                <!-- SUBMIT -->
 
                 <button type="submit" class="login-submit">
                     Login
@@ -198,14 +473,31 @@
 
             </form>
 
-            <div class="register-link">
-                Don't have an account?
-                <a href="#">Register here</a>
+            <!-- DIVIDER -->
+
+            <div class="divider">
+                <span>Don't have an account?</span>
             </div>
+
+            <!-- REGISTER BUTTON -->
+
+            <a href="#" class="register-btn">
+                Create an Account
+            </a>
+
+            <!-- BACK TO MENU -->
+
+            <a href="menu.html" class="back-link">
+                ← Browse Menu Without Logging In
+            </a>
 
         </div>
 
     </main>
+
+    <!-- ========================
+         FOOTER
+    ======================== -->
 
     <footer class="footer">
         &copy; 2025 Quick Koffiee. All Rights Reserved.
