@@ -8,67 +8,224 @@
 
 <style>
 
-/* Same global styles as index.html */
+/* =========================
+   GLOBAL RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(92, 51, 23, 0.95);
+    overflow: hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    background: #3e2413;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #d4a373;
+}
+
+/* =========================
+   LOGO SECTION
+========================= */
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-section img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.logo-section h1 {
+    color: white;
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+    text-decoration: none;
+    background: #d4a373;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: white;
+    color: #3e2413;
+}
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    width: 100%;
+    background: #6f4e37;
+    padding: 18px 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    background: white;
+    color: #5c3317;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #d4a373;
+    color: white;
+}
+
+/* ACTIVE NAV LINK */
+
+.navbar a.active {
+    background: #d4a373;
+    color: white;
+}
+
+/* =========================
+   BODY SECTION
+========================= */
 
 .body-section {
     padding: 40px 50px;
 }
 
+/* =========================
+   PAGE TITLE
+========================= */
+
 .page-title {
     color: white;
     font-size: 38px;
     margin-bottom: 30px;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #d4a373;
+    padding-bottom: 15px;
 }
 
-/* CART TABLE */
+/* =========================
+   CART TABLE
+========================= */
 
 .cart-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .cart-table th {
     background: #3e2413;
     color: #d4a373;
-    padding: 15px;
+    padding: 16px 18px;
     text-align: left;
     font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 .cart-table td {
     background: #8b5e3c;
     color: white;
-    padding: 15px;
+    padding: 15px 18px;
     border-bottom: 2px solid #5c3317;
     font-size: 15px;
+    vertical-align: middle;
 }
+
+.cart-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ITEM IMAGE IN TABLE */
 
 .cart-table td img {
     width: 70px;
     height: 70px;
     object-fit: cover;
     border-radius: 10px;
+    border: 2px solid #d4a373;
+    display: block;
 }
 
-/* QUANTITY CONTROLS */
+/* =========================
+   QUANTITY CONTROLS
+========================= */
 
 .qty-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .qty-btn {
     background: #d4a373;
     color: white;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
+    font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    line-height: 1;
 }
 
 .qty-btn:hover {
@@ -80,20 +237,23 @@
     color: white;
     font-size: 18px;
     font-weight: bold;
-    min-width: 20px;
+    min-width: 24px;
     text-align: center;
 }
 
-/* REMOVE BUTTON */
+/* =========================
+   REMOVE BUTTON
+========================= */
 
 .remove-btn {
-    background: #c0392b;
+    background: #a93226;
     color: white;
     border: none;
-    padding: 8px 14px;
+    padding: 9px 16px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -101,50 +261,105 @@
     background: #e74c3c;
 }
 
-/* CART SUMMARY */
+/* =========================
+   ITEM PRICE IN TABLE
+========================= */
+
+.item-price {
+    color: #d4a373;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* =========================
+   SUBTOTAL IN TABLE
+========================= */
+
+.item-subtotal {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* =========================
+   CART LAYOUT — TABLE + SUMMARY SIDE BY SIDE
+========================= */
+
+.cart-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* TABLE TAKES UP MOST SPACE */
+
+.cart-left {
+    flex: 1;
+    min-width: 0;
+}
+
+/* SUMMARY ON THE RIGHT */
+
+.cart-right {
+    width: 360px;
+    flex-shrink: 0;
+}
+
+/* =========================
+   ORDER SUMMARY BOX
+========================= */
 
 .cart-summary {
     background: #8b5e3c;
     border-radius: 20px;
-    padding: 25px;
-    max-width: 400px;
-    margin-left: auto;
+    padding: 30px 25px;
+    position: sticky;
+    top: 20px;
 }
 
 .cart-summary h2 {
     color: white;
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #d4a373;
+    padding-bottom: 12px;
 }
+
+/* SUMMARY ROWS */
 
 .summary-row {
     display: flex;
     justify-content: space-between;
     color: #f5f5f5;
     font-size: 16px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
+
+/* TOTAL ROW */
 
 .summary-row.total {
     color: #d4a373;
     font-size: 22px;
     font-weight: bold;
     border-top: 2px solid #d4a373;
-    padding-top: 12px;
+    padding-top: 14px;
     margin-top: 8px;
+    margin-bottom: 0;
 }
+
+/* CHECKOUT BUTTON */
 
 .checkout-btn {
     width: 100%;
     background: #d4a373;
     color: white;
     border: none;
-    padding: 15px;
+    padding: 16px;
     border-radius: 12px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 22px;
     transition: 0.3s;
 }
 
@@ -153,24 +368,49 @@
     color: #3e2413;
 }
 
-/* EMPTY CART MESSAGE */
+/* CONTINUE SHOPPING LINK */
+
+.continue-link {
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    color: #f5deb3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.continue-link:hover {
+    color: #d4a373;
+}
+
+/* =========================
+   EMPTY CART MESSAGE
+========================= */
 
 .empty-cart {
     text-align: center;
     color: #f5deb3;
     font-size: 22px;
-    padding: 60px 0;
+    padding: 80px 20px;
+    background: #8b5e3c;
+    border-radius: 20px;
+}
+
+.empty-cart p {
+    margin-bottom: 25px;
 }
 
 .empty-cart a {
     display: inline-block;
-    margin-top: 20px;
     background: #d4a373;
     color: white;
-    padding: 12px 28px;
+    padding: 14px 32px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 17px;
     transition: 0.3s;
 }
 
@@ -179,11 +419,76 @@
     color: #3e2413;
 }
 
-@media(max-width: 900px) {
-    .body-section { padding: 20px; }
-    .cart-table { font-size: 13px; }
-    .cart-table th, .cart-table td { padding: 10px 8px; }
-    .cart-summary { max-width: 100%; }
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #3e2413;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .logo-section h1 {
+        font-size: 32px;
+    }
+
+    .logo-section img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+        overflow-x: auto;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+    }
+
+    .body-section {
+        padding: 20px;
+    }
+
+    /* STACK LAYOUT ON MOBILE */
+
+    .cart-layout {
+        flex-direction: column;
+    }
+
+    .cart-right {
+        width: 100%;
+    }
+
+    /* SCROLLABLE TABLE ON MOBILE */
+
+    .cart-left {
+        overflow-x: auto;
+    }
+
+    .cart-table {
+        min-width: 550px;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
 }
 
 </style>
@@ -192,88 +497,189 @@
 <body>
 <div class="container">
 
+    <!-- ========================
+         HEADER
+    ======================== -->
+
     <header class="header">
+
         <div class="logo-section">
             <img src="images/logo.jpg" alt="Quick Koffiee Logo">
             <h1>Quick Koffiee</h1>
         </div>
+
         <a href="login.html" class="login-btn">Login</a>
+
     </header>
 
-    <!-- NAVBAR — "Cart" is active -->
+    <!-- ========================
+         NAVIGATION
+         "Cart" is active on this page
+    ======================== -->
+
     <nav class="navbar" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
         <a href="cart.html" class="active">Cart</a>
     </nav>
 
+    <!-- ========================
+         MAIN CONTENT
+    ======================== -->
+
     <main class="body-section">
 
         <h1 class="page-title">🛒 Your Cart</h1>
 
-        <!-- CART ITEMS TABLE -->
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                    <th>Remove</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><img src="images/espresso.jpg" alt="Espresso"></td>
-                    <td>Espresso</td>
-                    <td>P15.00</td>
-                    <td>
-                        <div class="qty-controls">
-                            <button class="qty-btn">−</button>
-                            <span class="qty-num">1</span>
-                            <button class="qty-btn">+</button>
-                        </div>
-                    </td>
-                    <td>P15.00</td>
-                    <td><button class="remove-btn">Remove</button></td>
-                </tr>
-                <tr>
-                    <td><img src="images/iced.jpg" alt="Iced Coffee"></td>
-                    <td>Iced Coffee</td>
-                    <td>P30.00</td>
-                    <td>
-                        <div class="qty-controls">
-                            <button class="qty-btn">−</button>
-                            <span class="qty-num">2</span>
-                            <button class="qty-btn">+</button>
-                        </div>
-                    </td>
-                    <td>P60.00</td>
-                    <td><button class="remove-btn">Remove</button></td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- CART LAYOUT: TABLE LEFT, SUMMARY RIGHT -->
 
-        <!-- ORDER SUMMARY -->
-        <div class="cart-summary">
-            <h2>Order Summary</h2>
-            <div class="summary-row">
-                <span>Subtotal</span>
-                <span>P75.00</span>
+        <div class="cart-layout">
+
+            <!-- LEFT: CART ITEMS TABLE -->
+
+            <div class="cart-left">
+
+                <table class="cart-table">
+
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- CART ROW 1 -->
+
+                        <tr>
+                            <td>
+                                <img src="images/espresso.jpg" alt="Espresso">
+                            </td>
+                            <td>Espresso</td>
+                            <td class="item-price">P15.00</td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="qty-btn">−</button>
+                                    <span class="qty-num">1</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">P15.00</td>
+                            <td>
+                                <button class="remove-btn">Remove</button>
+                            </td>
+                        </tr>
+
+                        <!-- CART ROW 2 -->
+
+                        <tr>
+                            <td>
+                                <img src="images/iced.jpg" alt="Iced Coffee">
+                            </td>
+                            <td>Iced Coffee</td>
+                            <td class="item-price">P30.00</td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="qty-btn">−</button>
+                                    <span class="qty-num">2</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">P60.00</td>
+                            <td>
+                                <button class="remove-btn">Remove</button>
+                            </td>
+                        </tr>
+
+                        <!-- CART ROW 3 -->
+
+                        <tr>
+                            <td>
+                                <img src="images/cappuccino.jpg" alt="Cappuccino">
+                            </td>
+                            <td>Cappuccino</td>
+                            <td class="item-price">P25.00</td>
+                            <td>
+                                <div class="qty-controls">
+                                    <button class="qty-btn">−</button>
+                                    <span class="qty-num">1</span>
+                                    <button class="qty-btn">+</button>
+                                </div>
+                            </td>
+                            <td class="item-subtotal">P25.00</td>
+                            <td>
+                                <button class="remove-btn">Remove</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
-            <div class="summary-row">
-                <span>VAT (14%)</span>
-                <span>P10.50</span>
+
+            <!-- RIGHT: ORDER SUMMARY -->
+
+            <div class="cart-right">
+
+                <div class="cart-summary">
+
+                    <h2>Order Summary</h2>
+
+                    <div class="summary-row">
+                        <span>Espresso × 1</span>
+                        <span>P15.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Iced Coffee × 2</span>
+                        <span>P60.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Cappuccino × 1</span>
+                        <span>P25.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>P100.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>VAT (14%)</span>
+                        <span>P14.00</span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>P114.00</span>
+                    </div>
+
+                    <button class="checkout-btn">
+                        Proceed to Checkout
+                    </button>
+
+                    <a href="menu.html" class="continue-link">
+                        ← Continue Shopping
+                    </a>
+
+                </div>
+
             </div>
-            <div class="summary-row total">
-                <span>Total</span>
-                <span>P85.50</span>
-            </div>
-            <button class="checkout-btn">Proceed to Checkout</button>
+
         </div>
 
     </main>
+
+    <!-- ========================
+         FOOTER
+    ======================== -->
 
     <footer class="footer">
         &copy; 2025 Quick Koffiee. All Rights Reserved.
@@ -281,4 +687,4 @@
 
 </div>
 </body>
-  </html>
+</html>
